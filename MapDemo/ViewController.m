@@ -134,7 +134,7 @@
         [self setAnnotationWithUserLocation:locationCoordinate];
     }
     //stop以后可以关掉蓝点
-//    [self stopLocation];
+    [self stopLocation];
 }
 
 #pragma 关闭定位服务
@@ -145,8 +145,9 @@
 -(void)stopLocation
 {
     _mapView.showsUserLocation = NO;
-    _mapView.delegate = nil;
-    _search.delegate = nil;
+//    _mapView.delegate = nil;
+//    _mapView.userLocationVisible = NO;
+//    _search.delegate = nil;
 }
 
 - (void)didReceiveMemoryWarning {
